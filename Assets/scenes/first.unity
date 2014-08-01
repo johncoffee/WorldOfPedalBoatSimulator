@@ -117,9 +117,17 @@ Prefab:
       propertyPath: m_Name
       value: boat 1 motherfucker
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
-      propertyPath: m_Enabled
-      value: 0
+    - target: {fileID: 11400004, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
+      propertyPath: leftKey
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
+      propertyPath: rightKey
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
+      propertyPath: forwardForce
+      value: 144
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
@@ -308,10 +316,6 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cdae0b9d65d1343779fffc43b4844503, type: 2}
-    - target: {fileID: 11400002, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
-      propertyPath: forwardForce
-      value: 77
-      objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
       propertyPath: m_Enabled
       value: 1
@@ -324,9 +328,13 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
-      propertyPath: m_Enabled
-      value: 0
+    - target: {fileID: 11400002, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
+      propertyPath: turnLeftKey
+      value: 276
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
+      propertyPath: turnRightKey
+      value: 275
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400004, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
@@ -358,7 +366,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 476614527}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: be052f7dc171c446aace64e53d7619cc, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -470,7 +478,7 @@ MeshCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 540655116}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: be052f7dc171c446aace64e53d7619cc, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -492,7 +500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &782492428
 AudioSource:
   m_ObjectHideFlags: 0
@@ -811,6 +819,7 @@ GameObject:
   - 92: {fileID: 1213266894}
   - 124: {fileID: 1213266893}
   - 81: {fileID: 1213266892}
+  - 114: {fileID: 1213266897}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -878,12 +887,28 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1213266891}
   m_LocalRotation: {x: .423198819, y: 0, z: 0, w: .906036913}
-  m_LocalPosition: {x: -.591344833, y: 26.9350624, z: -20.8374672}
+  m_LocalPosition: {x: -2.5, y: 20.0300007, z: -20.8899994}
   m_LocalScale: {x: 1, y: 2.07278204, z: 2.07278252}
   m_Children:
   - {fileID: 782492429}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1213266897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1213266891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f0c939dd8894ca3908f247bb237f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 1507775660}
+  - {fileID: 1414556919}
+  offsetZ: -20
+  offsetY: 20
 --- !u!1 &1344441113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,7 +1101,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1414556922
 MonoBehaviour:
@@ -1090,7 +1115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11c11e773c474cac9611414f4bc4be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardForce: 77
+  forwardForce: 133
+  turnSpeed: 1
+  turnLeftKey: 276
+  turnRightKey: 275
 --- !u!114 &1414556923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,8 +1187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9ec32b66bfe4ec48a44d7c6008118c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftKey: 97
-  rightKey: 100
+  leftKey: 273
+  rightKey: 274
   boat: {fileID: 1414556922}
 --- !u!1 &1507775660
 GameObject:
@@ -1196,7 +1224,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11c11e773c474cac9611414f4bc4be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardForce: 77
+  forwardForce: 144
+  turnSpeed: 1
+  turnLeftKey: 97
+  turnRightKey: 100
 --- !u!114 &1507775662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,7 +1312,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1507775668
 MonoBehaviour:
@@ -1295,8 +1326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9ec32b66bfe4ec48a44d7c6008118c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftKey: 276
-  rightKey: 275
+  leftKey: 119
+  rightKey: 115
   boat: {fileID: 1507775661}
 --- !u!1 &1557746983
 GameObject:

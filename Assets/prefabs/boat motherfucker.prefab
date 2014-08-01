@@ -99,7 +99,7 @@ Renderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
@@ -160,7 +160,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &6500000
 BoxCollider:
@@ -213,7 +213,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11c11e773c474cac9611414f4bc4be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardForce: 77
+  forwardForce: 133
+  turnSpeed: 1
+  turnLeftKey: 97
+  turnRightKey: 100
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
