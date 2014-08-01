@@ -3,7 +3,8 @@ using System.Collections;
 
 public class DualPedalScript : MonoBehaviour {
 
-	public KeyCode leftKey, rightKey;
+	public KeyCode leftKey = KeyCode.Alpha1,
+				   rightKey = KeyCode.Alpha2;
 	
 	public BoatMovementController boat;
 	
