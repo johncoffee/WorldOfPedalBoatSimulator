@@ -5,7 +5,7 @@ public class DualPedalScript : MonoBehaviour {
 
 	public KeyCode leftKey, rightKey;
 	
-	public BoatScript boat;
+	public BoatMovementController boat;
 	
 	bool left, right;
 	

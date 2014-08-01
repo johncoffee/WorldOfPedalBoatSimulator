@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Registry : MonoBehaviour {
 
-	public BoatScript boat1, boat2;
+	public BoatMovementController boat1, boat2;
 
 
 
