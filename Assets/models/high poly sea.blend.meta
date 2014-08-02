@@ -1,20 +1,14 @@
 fileFormatVersion: 2
-guid: e059cd225b8564bb09e3087128393278
+guid: 4e0a032a5343140178f0ba9ca8b8de9b
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: crown2
-    100002: stem2
-    100004: //RootNode
-    400000: crown2
-    400002: stem2
-    400004: //RootNode
-    2300000: crown2
-    2300002: stem2
-    3300000: crown2
-    3300002: stem2
-    4300000: stem2
-    4300002: crown2
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
+    7400000: Default Take
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -35,8 +29,8 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .100000001
-    meshCompression: 3
+    globalScale: 1
+    meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
