@@ -5,11 +5,8 @@ public class CameraScripts : MonoBehaviour {
 
     private SmoothFollow _Follow;
 
-    public GameObject Sphere;
-
+    public GameObject Tracker;
     public GameObject[] Boats;
-    //public GameObject Boat1;
-    //public GameObject Boat2;
 
     public float DistScale = 1.0f;
     public Vector3 Add;
@@ -21,11 +18,7 @@ public class CameraScripts : MonoBehaviour {
 
 	void Update ()
     {
-        //Vector3 abHeading = Boat2.transform.position - Boat1.transform.position;
-        //Vector3 perp = Vector3.Cross(abHeading, Vector3.up);
-        //Vector3 halfWay = (Boat1.transform.position + Boat2.transform.position) * 0.5f;
-
-        Sphere.transform.position = GetCenterPoint();
+        Tracker.transform.position = GetCenterPoint();
 
         Vector3 p1;
         Vector3 p2;
