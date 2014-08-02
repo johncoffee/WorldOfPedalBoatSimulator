@@ -24,7 +24,7 @@ public class CameraFollow : MonoBehaviour {
 
 		median /= targets.Length;	
 
-		transform.position = new Vector3(transform.position.x, median.y + offsetY, median.z + offsetZ);
+		transform.position = new Vector3(median.x, median.y + offsetY, median.z + offsetZ);
 	}
 	
 	void Update () {

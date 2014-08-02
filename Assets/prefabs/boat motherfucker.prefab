@@ -172,8 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1717660ecff3694469584c7987323fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardForce: 133
+  forwardForce: 160
   turnSpeed: 1
+  maxSpeed: 7.5
   turnLeftKey: 276
   turnRightKey: 275
 --- !u!136 &13600000
@@ -182,7 +183,7 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Material: {fileID: 13400000, guid: be052f7dc171c446aace64e53d7619cc, type: 2}
+  m_Material: {fileID: 13400000, guid: 648887b58ddbe43518bb042b670f2de5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: .5
@@ -195,7 +196,7 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Material: {fileID: 13400000, guid: be052f7dc171c446aace64e53d7619cc, type: 2}
+  m_Material: {fileID: 13400000, guid: 648887b58ddbe43518bb042b670f2de5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: .5

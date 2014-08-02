@@ -6,6 +6,8 @@ public class BoatMovementController : MonoBehaviour {
 	public float forwardForce = 10f;
 	public float turnSpeed = 1;
 
+	public float maxSpeed = 7.5f;
+
 	bool turnLeft;
 	bool turnRight;
 
@@ -33,21 +35,33 @@ public class BoatMovementController : MonoBehaviour {
 			rigidbody.angularVelocity *= (0.99f * Time.fixedDeltaTime);		
 		}
 
+//		Debug.Log(rigidbody.velocity.magnitude);
 	}
 
 
 	public void Forward() {
-		this.rigidbody.AddForce(transform.forward * forwardForce);
+		if (rigidbody.velocity.magnitude < maxSpeed) {
+			this.rigidbody.AddForce(transform.forward * forwardForce);
+		}
+	}
+
+	public void Backward() {
+		this.rigidbody.AddForce(transform.forward * -forwardForce);
 	}
 	
 	public void TurnLeft() {
-		transform.Rotate(0, -turnSpeed, 0);
+		float mag = Mathf.Min(rigidbody.velocity.magnitude, 5);
+		float _turnSpeed = mag/5f * turnSpeed;
+		transform.Rotate(0, -_turnSpeed, 0);
 	}
 	
 	
 	public void TurnRight() {
 //		rigidbody.AddRelativeTorque(new Vector3(0f,turnSpeed*Time.deltaTime,0f));
-		transform.Rotate(0, turnSpeed, 0);
+		
+		float mag = Mathf.Min(rigidbody.velocity.magnitude, 5);
+		float _turnSpeed = mag/5f * turnSpeed;
+		transform.Rotate(0, _turnSpeed, 0);
 	}
 
 }
