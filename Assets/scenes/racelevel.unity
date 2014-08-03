@@ -157,7 +157,8 @@ GameObject:
   - 114: {fileID: 32261980}
   - 114: {fileID: 32261979}
   - 54: {fileID: 32261982}
-  - 65: {fileID: 32261981}
+  - 136: {fileID: 32261983}
+  - 136: {fileID: 32261981}
   m_Layer: 0
   m_Name: boat slide motherfucker
   m_TagString: Untagged
@@ -172,7 +173,7 @@ Transform:
   m_PrefabInternal: {fileID: 1671205067}
   m_GameObject: {fileID: 32261977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.6866112, y: .0205972195, z: 29.0487652}
+  m_LocalPosition: {x: 52.6866112, y: .155457258, z: 29.0487652}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 463204405}
@@ -192,8 +193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9ec32b66bfe4ec48a44d7c6008118c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftKey: 49
-  rightKey: 50
+  leftKey: 275
+  rightKey: 276
   boat: {fileID: 32261980}
 --- !u!114 &32261980
 MonoBehaviour:
@@ -207,24 +208,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1717660ecff3694469584c7987323fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardForce: 10
+  forwardForce: 160
   turnSpeed: 1
   maxSpeed: 7.5
-  turnLeftKey: 97
-  turnRightKey: 100
---- !u!65 &32261981
-BoxCollider:
+  turnLeftKey: 119
+  turnRightKey: 97
+--- !u!136 &32261981
+CapsuleCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 0e5a64a5f022f4d14b0012f5ed2c609b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1671205067}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 32261977}
-  m_Material: {fileID: 13400000, guid: 648887b58ddbe43518bb042b670f2de5, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.04999995, y: .49000001, z: 2.43000007}
-  m_Center: {x: 0, y: .239999995, z: .400000006}
+  m_Radius: .5
+  m_Height: 3
+  m_Direction: 2
+  m_Center: {x: -.5, y: .5, z: 0}
 --- !u!54 &32261982
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -241,6 +242,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &32261983
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32261977}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .5
+  m_Height: 3
+  m_Direction: 2
+  m_Center: {x: .5, y: .50999999, z: 0}
 --- !u!1 &56333933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,7 +1305,7 @@ GameObject:
   - 4: {fileID: 463204405}
   - 114: {fileID: 463204408}
   m_Layer: 0
-  m_Name: crude water bike
+  m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3210,7 +3224,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .0205972195
+      value: .264103651
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3274,19 +3288,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
       propertyPath: turnLeftKey
-      value: 100
+      value: 115
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
       propertyPath: turnRightKey
-      value: 115
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
       propertyPath: leftKey
-      value: 276
+      value: 273
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
       propertyPath: rightKey
-      value: 275
+      value: 274
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
+      propertyPath: m_Name
+      value: model
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
@@ -3893,8 +3911,8 @@ MonoBehaviour:
   forwardForce: 160
   turnSpeed: 1
   maxSpeed: 7.5
-  turnLeftKey: 100
-  turnRightKey: 115
+  turnLeftKey: 115
+  turnRightKey: 100
 --- !u!136 &1507775662
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3935,8 +3953,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9ec32b66bfe4ec48a44d7c6008118c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftKey: 276
-  rightKey: 275
+  leftKey: 273
+  rightKey: 274
   boat: {fileID: 1507775661}
 --- !u!4 &1507775666
 Transform:
@@ -3945,7 +3963,7 @@ Transform:
   m_PrefabInternal: {fileID: 1344464483}
   m_GameObject: {fileID: 1507775660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.6192245, y: .0205972195, z: 28.7325439}
+  m_LocalPosition: {x: 55.6192245, y: .264103651, z: 28.7325439}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 1613012311}
@@ -4177,7 +4195,7 @@ GameObject:
   - 4: {fileID: 1613012311}
   - 114: {fileID: 1613012312}
   m_Layer: 0
-  m_Name: swan container
+  m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4349,7 +4367,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .0205972195
+      value: .155457258
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4395,9 +4413,50 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
+      propertyPath: leftKey
+      value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
+      propertyPath: rightKey
+      value: 276
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
+      propertyPath: turnRightKey
+      value: 97
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
+      propertyPath: forwardForce
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
+      propertyPath: m_Size.x
+      value: 2.26999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
+      propertyPath: m_Size.y
+      value: .389999986
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
+      propertyPath: m_Size.z
+      value: 2.77999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
+      propertyPath: m_Center.z
+      value: .0700000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
+      propertyPath: turnLeftKey
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
+      propertyPath: m_Name
+      value: model
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
     - {fileID: 6500002, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
+    - {fileID: 6500000, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
   m_RootGameObject: {fileID: 32261977}
   m_IsPrefabParent: 0
