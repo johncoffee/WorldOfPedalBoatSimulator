@@ -516,9 +516,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 289dbb745c3398840abefbca9e3dedc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Buoyancies:
-  - {fileID: 945871847}
-  - {fileID: 1822162063}
+  Gravity: {x: 0, y: 0, z: 0}
+  Force: 0
 --- !u!23 &553681395
 Renderer:
   m_ObjectHideFlags: 0
@@ -1095,9 +1094,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 289dbb745c3398840abefbca9e3dedc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Buoyancies:
-  - {fileID: 218571042}
-  - {fileID: 2116892}
+  Gravity: {x: 0, y: 0, z: 0}
+  Force: 0
 --- !u!23 &1554913445
 Renderer:
   m_ObjectHideFlags: 0
@@ -1482,9 +1480,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 289dbb745c3398840abefbca9e3dedc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Buoyancies:
-  - {fileID: 568049087}
-  - {fileID: 512720514}
+  Gravity: {x: 0, y: 0, z: 0}
+  Force: 0
 --- !u!23 &1842617622
 Renderer:
   m_ObjectHideFlags: 0
@@ -1666,9 +1663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 289dbb745c3398840abefbca9e3dedc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Buoyancies:
-  - {fileID: 1385859839}
-  - {fileID: 1613038021}
+  Gravity: {x: 0, y: 0, z: 0}
+  Force: 0
 --- !u!54 &2010692263
 Rigidbody:
   m_ObjectHideFlags: 0
