@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1717660ecff3694469584c7987323fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardForce: 160
+  forwardForce: 170
   turnSpeed: 1
   maxSpeed: 7.5
   turnLeftKey: 119
@@ -6989,6 +6989,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
+      propertyPath: forwardForce
+      value: 170
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5ce0960440db840e7aba251041e62b1b, type: 2}
@@ -7795,7 +7799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1717660ecff3694469584c7987323fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardForce: 160
+  forwardForce: 170
   turnSpeed: 1
   maxSpeed: 7.5
   turnLeftKey: 115
@@ -8651,7 +8655,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
       propertyPath: forwardForce
-      value: 160
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: 0e5a64a5f022f4d14b0012f5ed2c609b, type: 2}
       propertyPath: m_Size.x
